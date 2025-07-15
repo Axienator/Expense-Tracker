@@ -52,13 +52,14 @@ body {
 }
 
 .expenses {
-    margin:50px auto;
+    margin:20px auto;
 }
 
 .ul {
+    
     background-color: aliceblue;
 }
 
 li {
-    list-style-type: none;
+    font-size: 20px;
 }

@@ -6,7 +6,7 @@ const addexpense = document.getElementById('addexpense')
 const totalexpense = document.getElementById('totalexpense')
 const list = document.getElementById('list')
 
-let input = " "
+
 
 
 addexpense.addEventListener ('click', x => {
