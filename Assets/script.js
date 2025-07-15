@@ -14,6 +14,10 @@ addexpense.addEventListener ('click', x => {
    const additem = document.createElement('li')
    additem.textContent = uservalue
    list.appendChild(additem)  
+   if (!uservalue === "") {
+      alert("Nothing to add!") 
+      return
+   }
 })
 
 
