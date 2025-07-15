@@ -10,10 +10,15 @@ const list = document.getElementById('list')
 
 
 addexpense.addEventListener ('click', x => {
-   const uservalue = userinputD.value.trim()
+   const uservalueD = userinputD.value.trim()
+   const uservalueA = userinputA.value.trim()
    const additem = document.createElement('li')
-   additem.textContent = uservalue
-   list.appendChild(additem)  
+   if (!uservalueD || !uservalueA) {
+      return
+   } else {  
+   list.appendChild(additem)
+   additem.textContent = `${uservalueD} - ${uservalueA}$`
+   }
 })
 
 
