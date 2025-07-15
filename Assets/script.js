@@ -7,14 +7,19 @@ const totalexpense = document.getElementById('totalexpense')
 const list = document.getElementById('list')
 
 
-
+let total = 0
 
 addexpense.addEventListener ('click', x => {
    const uservalueD = userinputD.value.trim()
    const uservalueA = userinputA.value.trim()
+   const useramount = parseFloat(uservalueA).toFixed(2) // added a parseFloat, so that I can turn the input of amount from string into a real number with 2 decimals(.toFixed(2))
    const additem = document.createElement('li')
-   additem.textContent = uservalue
-   list.appendChild(additem)  
+
+
+   if (!uservalueD || !uservalueA) return // I cleaned up the else and instead put the 'return' on this line, it still has the same functionality but more clean.
+   list.appendChild(additem)
+   additem.textContent = `${uservalueD} - ${useramount}$`
+   
 })
 
 
