@@ -13,12 +13,8 @@ addexpense.addEventListener ('click', x => {
    const uservalueD = userinputD.value.trim()
    const uservalueA = userinputA.value.trim()
    const additem = document.createElement('li')
-   if (!uservalueD || !uservalueA) {
-      return
-   } else {  
-   list.appendChild(additem)
-   additem.textContent = `${uservalueD} - ${uservalueA}$`
-   }
+   additem.textContent = uservalue
+   list.appendChild(additem)  
 })
 
 
