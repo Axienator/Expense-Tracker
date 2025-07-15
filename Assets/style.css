@@ -1,0 +1,65 @@
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: beige;
+}
+
+.page-layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    width: 180vh;
+    flex-wrap: wrap;
+}
+
+.container {
+    width: 25rem;
+    height: 20rem;
+    padding: 10px;
+    background-color: rgba(64, 100, 35, 0.678);
+}
+
+.descriptionbox {
+    padding: 2px;
+    background-color: beige;
+}
+
+.amountbox {
+    padding: 2px;
+    background-color: beige;
+}
+
+.container2 {
+    width: 25rem;
+    height: 15rem;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(64, 100, 35, 0.678);
+}
+
+.container2 p{
+    font-size: 20px;
+}
+
+.expenses {
+    margin:20px auto;
+}
+
+.ul {
+    
+    background-color: aliceblue;
+}
+
+li {
+    font-size: 20px;
+}
