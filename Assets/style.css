@@ -81,6 +81,12 @@ body {
     background-color: aliceblue;
 }
 
+#list {
+    max-height: 150px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
 li {
     list-style-type: none;
     font-size: 15px;
@@ -90,4 +96,9 @@ li {
     border-left: 4px solid #007bff;
     border-radius: 10px;
     overflow: hidden;
+}
+
+.remove-btn {
+    float: right;
+    cursor: pointer;
 }

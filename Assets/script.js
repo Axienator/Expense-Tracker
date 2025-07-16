@@ -11,23 +11,35 @@ const list = document.getElementById('list')
 
 let total = 0
 
-addexpense.addEventListener ('click', x => {
+addexpense.addEventListener ('click', () => {
    const uservalueD = userinputD.value.trim()
    const uservalueA = userinputA.value.trim()
-   if (!uservalueD || !uservalueA) return // I cleaned up the else and instead put the 'return' on this line, it still has the same functionality but more clean.
+   if (!uservalueD || !uservalueA) return 
    const additem = document.createElement('li')
-   const useramount = parseFloat(uservalueA).toFixed(2) // added a parseFloat, so that I can turn the input of amount from string into a real number with 2 decimals(.toFixed(2))
+   const removebtn = document.createElement('button')
+   removebtn.textContent = 'X'
+   removebtn.classList.add('remove-btn')
+   const useramount = parseFloat(uservalueA).toFixed(2) 
    additem.textContent = `${uservalueD} - $${useramount}`
    list.appendChild(additem)
-
+   additem.appendChild(removebtn)
    total += parseFloat(useramount)
+
    totalexpense.textContent = `Total Expenses: $${total.toFixed(2)}`
+      removebtn.addEventListener('click', () => {
+      list.removeChild(additem)
+      total -= parseFloat(useramount)
+      totalexpense.textContent = `Total Expenses: $${total.toFixed(2)}`
+   })
 })
 
 
-// when the expense is added, the total expense should pop up 
 
 
+// Things to Add 
 
+// the page should start off as only 1 container, when expense is added, the container 2 pops up
 
-
+// CSS design
+// Money sign inside the amount container
+// Change currency
